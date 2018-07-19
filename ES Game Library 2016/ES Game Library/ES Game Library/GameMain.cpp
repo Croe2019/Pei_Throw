@@ -17,6 +17,8 @@ bool GameMain::Initialize()
 	/*テーブルクラス初期化*/
 	table.Initialize();
 	/*プレイヤークラス初期化*/
+	charactor1 = Player::CreatePlayer1();
+	charactor2 = Player::CreatePlayer2();
 	charactor1.Initialize(Vector3(1180.0f, 260.0f, 0.0f), _T("Players/Player1.png"));
 	charactor2.Initialize(Vector3(0.0f, 260.0f, 0.0f), _T("Players/Player2.png"));
 
@@ -44,6 +46,8 @@ int GameMain::Update()
 {
 	// TODO: Add your update logic here
 
+	charactor1.Update();
+	charactor2.Update();
 
 	return 0;
 }

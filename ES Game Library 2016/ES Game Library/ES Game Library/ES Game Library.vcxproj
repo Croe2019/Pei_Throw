@@ -167,6 +167,7 @@
     <ClCompile Include="MyClass\Control.cpp" />
     <ClCompile Include="MyClass\Player.cpp" />
     <ClCompile Include="MyClass\Player1Move.cpp" />
+    <ClCompile Include="MyClass\Player2Move.cpp" />
     <ClCompile Include="MyClass\Table.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -225,6 +226,7 @@
     <ClInclude Include="MyClass\Control.hpp" />
     <ClInclude Include="MyClass\Player.hpp" />
     <ClInclude Include="MyClass\Player1Move.hpp" />
+    <ClInclude Include="MyClass\Player2Move.hpp" />
     <ClInclude Include="MyClass\PlayerMoveinterface.hpp" />
     <ClInclude Include="MyClass\Table.hpp" />
     <ClInclude Include="StdAfx.h" />

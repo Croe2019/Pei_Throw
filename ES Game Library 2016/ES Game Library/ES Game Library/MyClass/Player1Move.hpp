@@ -2,6 +2,8 @@
 #include "../ESGLib.h"
 #include "PlayerMoveinterface.hpp"
 
+class Control;
+
 /*プレイヤー1の移動を管理するクラス*/
 class Player1Move : public PlayerMoveinterface
 {

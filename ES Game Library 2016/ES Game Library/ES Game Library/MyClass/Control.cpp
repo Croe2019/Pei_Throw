@@ -18,7 +18,7 @@ KeyboardBuffer Control::KeyBuffer()
 }
 
 /*“ü—Í’†‚Ìó‘Ô‚ğæ“¾‚·‚é*/
-KeyboardState Control::KeyState()
+KeyboardState& Control::KeyState()
 {
 	key_state = Keyboard->GetState();
 	return key_state;

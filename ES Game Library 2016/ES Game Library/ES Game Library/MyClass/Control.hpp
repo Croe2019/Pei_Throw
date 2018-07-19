@@ -9,7 +9,7 @@ public:
 	/*シングルトンインスタンスの取得*/
 	static Control& GetInstance() { static Control control; return control; }
 	KeyboardBuffer KeyBuffer();
-	KeyboardState KeyState();
+	KeyboardState& KeyState();
 private:
 	Control();
 	KeyboardBuffer key_buffer;
