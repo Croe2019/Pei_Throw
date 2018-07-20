@@ -19,8 +19,8 @@ bool GameMain::Initialize()
 	/*プレイヤークラス初期化*/
 	charactor1 = Player::CreatePlayer1();
 	charactor2 = Player::CreatePlayer2();
-	charactor1.Initialize(Vector3(1180.0f, 260.0f, 0.0f), _T("Players/Player1.png"));
-	charactor2.Initialize(Vector3(0.0f, 260.0f, 0.0f), _T("Players/Player2.png"));
+	charactor1->Initialize(Vector3(1180.0f, 260.0f, 0.0f), _T("Players/Player1.png"));
+	charactor2->Initialize(Vector3(0.0f, 260.0f, 0.0f), _T("Players/Player2.png"));
 
 	return true;
 }
@@ -46,8 +46,8 @@ int GameMain::Update()
 {
 	// TODO: Add your update logic here
 
-	charactor1.Update();
-	charactor2.Update();
+	charactor1->Update();
+	charactor2->Update();
 
 	return 0;
 }
@@ -67,8 +67,8 @@ void GameMain::Draw()
 
 	back_ground.Draw();
 	table.Draw();
-	charactor1.Draw();
-	charactor2.Draw();
+	charactor1->Draw();
+	charactor2->Draw();
 
 	SpriteBatch.End();
 

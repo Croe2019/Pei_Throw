@@ -4,12 +4,15 @@
 
 Player::Player()
 {
-
+	player_move_interface = nullptr;
 }
 
 Player::~Player()
 {
-
+	if (this->player_move_interface != nullptr)
+	{
+		delete player_move_interface;
+	}
 }
 
 /*変数初期化*/
@@ -24,22 +27,23 @@ bool Player::Initialize(Vector3 position, LPCTSTR player_name)
 void Player::Update()
 {
 	position = player_move_interface->Move(position);
+	position = player_move_interface->NotLeaveScreen(position);
 }
 
 /*プレイヤー１を生成*/
-Player Player::CreatePlayer1()
+Player* Player::CreatePlayer1()
 {
 	Player *player1 = new Player();
 	player1->SetMove(new Player1Move());
-	return *player1;
+	return player1;
 }
 
 /*プレイヤー２を生成*/
-Player Player::CreatePlayer2()
+Player* Player::CreatePlayer2()
 {
 	Player *player2 = new Player();
 	player2->SetMove(new Player2Move());
-	return *player2;
+	return player2;
 }
 
 void Player::SetMove(PlayerMoveinterface *player_move_interface)

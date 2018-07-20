@@ -65,8 +65,8 @@ private:
 	/*テーブルクラス宣言*/
 	Table table;
 	/*プレイヤークラス宣言*/
-	Player charactor1;
-	Player charactor2;
+	Player* charactor1;
+	Player* charactor2;
 
 	// 関数宣言
 

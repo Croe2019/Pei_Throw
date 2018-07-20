@@ -10,8 +10,8 @@ public:
 	~Player();
 	bool Initialize(Vector3 position, LPCTSTR player_name);
 	void Update();
-	static Player CreatePlayer1();
-	static Player CreatePlayer2();
+	static Player* CreatePlayer1();
+	static Player* CreatePlayer2();
 	void SetMove(PlayerMoveinterface *player_move_interface);
 	void Draw();
 private:
